@@ -1,0 +1,279 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy by Ivo - One Page Two Column Resume
+% LaTeX Template
+% Version 1.0 (14/06/2018)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+% Version 1.2 (16/9/2014)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.0:
+% 1. Added \header command for name section with background color
+% 2. Added \skill command for a bullet-based skill classification (until 5)
+% 3. Added \companylogo command for adding institution logos
+% 4. Added Summary section
+% 5. Changed order of 1st column topics
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+%   - One possible solution in next version
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\namesection{My }{Name}{ 
+\header{My }{Name}{ %\urlstyle{same}\href{http://anthonyattard.com}{anthonyattard.com} | 
+\href{mailto:myemail@address.com}{myemail@address.com} | +12 345 678 910
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[t]{0.26\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education} 
+%\subsection{}
+\descript{My PhD Degree}
+\location{University, Country, Year}
+GPA: X / 20, Thesis: Y / 20
+\sectionsep
+
+\descript{My MSc Degree}
+\location{University, Country, Year}
+GPA: X / 20, Thesis: Y / 20
+\sectionsep
+
+\descript{My BSc Degree}
+\location{University, Country, Year}
+GPA: X / 20, Project: Y / 20
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Skills}
+\subsection{Technical}
+%\location{Over 5000 lines:}
+Java \textbullet{}   Lisp \textbullet{} Python \textbullet{} PHP \\ 
+HTML \textbullet{} CSS \textbullet{} JavaScript \\ 
+JADE \textbullet{} Git \textbullet{} XML \textbullet{} JSON \\
+SQL \textbullet{} MySQL \textbullet{} UML \textbullet{} \LaTeX \\
+\sectionsep
+\subsection{Soft skills}
+Leadership \textbullet{} Supervising \\
+Teamplayer \textbullet{} Dedication \\
+Responsibility \textbullet{} Proactivity \\
+Communication \textbullet{} Multicultural
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     INTERESTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Interests}
+Artificial Intelligence \\
+Machine Learning \\
+Deep Learning \\
+Big Data \\
+Software Engineering \\
+Software Architecture \\
+Decision Support Systems
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LANGUAGES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Languages}
+Portuguese \skill{5}
+English \skill{4}
+Spanish \skill{3}
+French \skill{2}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Links} 
+LinkedIn  \href{https://goo.gl/R@ND0M}{\custombold{goo.gl/R@ND0M}} \\
+OtherLink  \href{https://goo.gl/R@ND0M}{\custombold{goo.gl/R@ND0M}} \\
+OtherLink  \href{https://goo.gl/r@ND0M}{\custombold{goo.gl/R@ND0M}} \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SUMMARY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Summary}
+Curabitur quis purus nec neque finibus convallis eget ac augue. Maecenas ut feugiat purus. Mauris mattis turpis sed neque porttitor feugiat. Duis vitae tellus vel dui auctor vestibulum. Phasellus in egestas libero, et vehicula turpis. Vivamus rhoncus blandit purus, ac tincidunt quam pretium vel. Nulla turpis lacus, interdum a magna tincidunt, accumsan maximus lorem.
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experience}
+
+\companylogo{figures/figure-template.png}{0.12\textwidth}{-20pt}
+\runsubsection{My Company}
+\descript{| My Position }
+\location{Month Year – Present | City, Country}
+%\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Aenean egestas sem vehicula turpis mattis, et convallis purus porttitor.
+\item Morbi sollicitudin elementum nunc, eu dignissim diam vehicula id.
+\item Mauris sed placerat leo, eu semper magna. Donec et blandit odio.
+\item Proin a justo tristique, euismod sapien volutpat, porttitor erat.
+\end{tightemize}
+\sectionsep
+
+\companylogo{figures/figure-template.png}{0.12\textwidth}{-20pt}
+\runsubsection{My Company}
+\descript{| My Position }
+\location{Month Year – Month Year | City, Country}
+\begin{tightemize}
+\item Projects: 
+    \href{https://goo.gl/R@ND0M}{\custombold{Project1}}, 
+    \href{https://goo.gl/R@ND0M}{\custombold{Project2}} and 
+    \href{https://goo.gl/R@ND0M}{\custombold{Project3}}
+\item Integer fermentum rhoncus velit, eu semper velit sagittis non. 
+\item Sed aliquam tellus porttitor, dictum lacus in, semper nunc.
+\end{tightemize}
+\sectionsep
+
+\companylogo{figures/figure-template.png}{0.12\textwidth}{-20pt}
+\runsubsection{My Company}
+\descript{| My Position }
+\location{Month Year – Month Year | City, Country}
+\begin{tightemize}
+\item Projects: 
+    \href{https://goo.gl/R@ND0M}{\custombold{Project1}}, 
+    \href{https://goo.gl/R@ND0M}{\custombold{Project2}} and 
+    \href{https://goo.gl/R@ND0M}{\custombold{Project3}}
+\item Duis ultrices sem id lectus ultrices egestas. 
+\item Ut non eleifend tortor, ac pretium mauris.
+\item  Morbi consectetur pretium sollicitudin. 
+\item Aliquam congue posuere libero, nec faucibus justo ullamcorper in.
+\end{tightemize}
+\sectionsep
+
+\companylogo{figures/figure-template.png}{0.12\textwidth}{-20pt}
+\runsubsection{My Company}
+\descript{| My Position (Internship)}
+\location{Month Year – Month Year | City, Country}
+\begin{tightemize}
+\item Nunc ultricies molestie leo rutrum dignissim. 
+\item Suspendisse dapibus id libero elementum lobortis.
+\item Aliquam dui quam, finibus eget justo in, scelerisque consectetur est.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Research}
+%\runsubsection{Cornell Robot Learning Lab}
+%\descript{| Researcher}
+%\location{Jan 2014 – Jan 2015 | Ithaca, NY}
+%Worked with \textbf{\href{http://www.cs.cornell.edu/~ashesh/}{Ashesh Jain}} and %\textbf{\href{http://www.cs.cornell.edu/~asaxena/}{Prof Ashutosh Saxena}} to create \textbf{PlanIt}, a tool which  learns from large scale user preference feedback to plan robot trajectories in human environments.  
+%\sectionsep
+%
+%\runsubsection{Cornell Phonetics Lab}
+%\descript{| Head Undergraduate Researcher}
+%\location{Mar 2012 – May 2013 | Ithaca, NY}
+%Led the development of \textbf{QuickTongue}, the first ever breakthrough tongue-controlled game with \textbf{\href{http://conf.ling.cornell.edu/~tilsen/}{Prof Sam Tilsen}} to aid in Linguistics research. 
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Awards} 
+\begin{tabular}{r p{10.95cm}}
+Year    & Sed auctor, enim sit amet consectetur ultricies, lectus nulla ultrices nisi, ut tristique lectus sapien a quam. Nunc et cursus ligula. \\
+Year    & Etiam in volutpat lacus, non hendrerit massa. Aliquam erat volutpat. Duis ligula nisi, finibus id cursus sed, efficitur in est. \\
+Year    & Cras nec accumsan turpis. Pellentesque eu lobortis urna. Aliquam pulvinar non lacus quis imperdiet. \\
+Year    & Nunc tincidunt tellus bibendum accumsan laoreet.
+\end{tabular}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SOCIETIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Societies} 
+
+%\begin{tabular}{rll}
+%2014 	& top 12\%ile    & Tau Beta Pi Engineering Honor Society\\
+%2014   & National   & The Global Leadership and Education Forum (tGELF)\\
+%2012   &  National  & Golden Key International Honor Society\\
+%2012   &  National   & National Society of Collegiate Scholars\\
+%\end{tabular}
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Publications} 
+%\renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
+%\bibliographystyle{abbrv}
+%\bibliography{publications}
+%\nocite{*}
+
+
+\end{minipage} 
+\end{document}
+\documentclass[]{article}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Two pages:
+%   https://github.com/rohit-upadhya/ROHIT_UPADHYA_CV/blob/master/rohit_resume.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
